@@ -1,0 +1,14 @@
+@import'../../../styles.scss';
+
+.pict1 {
+    display: flex;
+    justify-content: space-around;
+    #pi {
+        width: 50px;
+        height: 70px;
+    }
+}
+
+a {
+    font-family: $fontText;
+}

@@ -8,13 +8,12 @@ import { Facts } from 'src/app/models/fact.model';
   styleUrls: ['./facts-list.component.scss']
 })
 export class FactsListComponent implements OnInit {
-  facts: Facts[];
+  facts: Facts[]= [];
 
-  constructor(
-    private getDatasService: PagesCommunicationService
-    ) { }
+  constructor(private getDatasService: PagesCommunicationService) { }
 
   ngOnInit() {
+    /* getting datas from page 1 through a service */
     this.facts = this.getDatasService.sendFacts();
   }
 

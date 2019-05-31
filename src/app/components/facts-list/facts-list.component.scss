@@ -1,0 +1,19 @@
+@import'../../../styles.scss';
+
+.collection{
+    width:90vw;
+
+    h3 {
+        margin: 10vh;
+        text-align: center;
+        font-family: $fontTitle;
+    }
+
+    th {
+        font-family: $fontTitle;
+    }
+
+    p, button, td{
+        font-family: $fontText;
+    }
+}

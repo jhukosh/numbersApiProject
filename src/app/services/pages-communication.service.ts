@@ -9,16 +9,18 @@ export class PagesCommunicationService {
 
   constructor() { }
 
+  /* getting facts objects from page 1 */
   getFacts(facts){
-    this.facts = facts;
+    this.facts.push(facts);
     this.saveToLocalStorage();
-    console.log(this.facts);
   }
 
+  /* sending facts collection to page 2 */
   sendFacts(){
     return this.facts
   }
 
+  /* saving into local storage to get the visitor a complete collection in page 2 */
   saveToLocalStorage() {
     localStorage.setItem('facts', JSON.stringify(this.facts));
   }

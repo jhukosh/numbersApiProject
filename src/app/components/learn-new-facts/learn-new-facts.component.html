@@ -1,23 +1,36 @@
-<div class='container flex-column align-items-start'>
-  <label>
-    Enter dates separated by commas (ex : 1/1, 4/13, 5/12) :
-    <input [ngModel]="datesToCheck" (ngModelChange)="datesToCheck=$event" placeholder="Enter your date here">
-  </label>
+<section class="form">
 
-  <button (click)='getFacts()'>Get interesting data about the dates</button>
-</div>
+  <div class='container p-0 flex-column align-items-start'>
 
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th scope="col">Dates</th>
-      <th scope="col">Historical facts</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let item of factsArr">
-      <td>{{ item.date }}</td>
-      <td>{{ item.fact }}</td>
-    </tr>
-  </tbody>
-</table>
+    <div class='row justify-content-center'>
+      <h3 class='col-10 text-center'>Welcome to Julia's numbers API app !</h3>
+      <p class='col-12 text-center'>If your want to learn historical facts about a date or more, this app is made for you.</p>
+    </div>
+
+    <label for='dates' class='row justify-content-center'>
+      <p class='col-10 text-center'>Enter dates separated by commas (ex : 1/1, 4/13, 5/12) :<p>
+      <input id='dates' class='col-12 input' [ngModel]="datesToCheck" (ngModelChange)="datesToCheck=$event" placeholder="Enter your date here">
+    </label>
+
+    <div class='row justify-content-center'>
+      <button [disabled]='enableClick' class='btn btn-dark' (click)='getFacts()'>Get interesting data about the dates</button>
+    </div>
+  </div>
+
+  <div class='m-0 row justify-content-center'>
+    <table class="table table-striped">
+      <thead class="thead-dark">
+        <tr class='row'>
+          <th class='col-3' scope="col">Dates</th>
+          <th class='col-9' scope="col">Historical facts</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class='row' *ngFor="let item of factsArr">
+          <td class='col-3'>{{ item.date }}</td>
+          <td class='col-9'>{{ item.fact }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
