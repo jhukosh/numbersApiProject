@@ -1,0 +1,25 @@
+<div class='container flex-column align-items-start'>
+  <label>
+    Enter dates separated by commas (ex : 1/1, 4/13, 5/12) :
+    <input [ngModel]="datesToCheck" (ngModelChange)="datesToCheck=$event" placeholder="Enter your date here">
+  </label>
+
+  <button (click)='getFacts()'>Get interesting data about the dates</button>
+</div>
+
+<div class='container d-flex flex-row justify-content-around'>
+  <div>
+    <h4>Dates</h4>
+    <div *ngFor="let date of dates">
+      <p>{{ date }}</p>
+    </div>
+  </div>
+
+  <div>
+    <h4>Historical facts</h4>
+    <div *ngFor="let fact of dateFact">
+      <p>{{ fact }}</p>
+    </div>
+  </div>
+
+</div>
