@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NumbersApiDatasService } from 'src/app/services/numbers-api-datas.service';
+import { PagesCommunicationService } from 'src/app/services/pages-communication.service';
+import { Facts } from 'src/app/models/fact.model';
 
 @Component({
   selector: 'app-learn-new-facts',
@@ -9,11 +11,15 @@ import { NumbersApiDatasService } from 'src/app/services/numbers-api-datas.servi
 export class LearnNewFactsComponent implements OnInit {
   fact;
   math;
-  dateFact = [];
   dates = [];
   datesToCheck;
+  factsArr : Facts[] = [];
+  factsObj : Facts;
 
-  constructor(private getApiDatasService: NumbersApiDatasService) { }
+  constructor(
+    private getApiDatasService: NumbersApiDatasService, 
+    private sendDatasService: PagesCommunicationService) 
+    { }
 
   ngOnInit() {
     this.getApiDatasService.getTrivia(42)
@@ -30,15 +36,19 @@ export class LearnNewFactsComponent implements OnInit {
 
   getFacts(){
     this.dates = this.datesToCheck.split(', ');
-    console.log(this.dates);
 
     for (let i = 0; i < this.dates.length; i++){
-    this.getApiDatasService.getDateFacts(this.dates[i])
+      this.getApiDatasService.getDateFacts(this.dates[i])
       .subscribe(dateFact => {
-        this.dateFact.push(dateFact)
+        this.factsObj = {
+          date: this.dates[i],
+          fact: dateFact
+        };
+        this.factsArr.push(this.factsObj);
       });
     }
-    console.log(this.dateFact);
+    this.sendDatasService.getFacts(this.factsArr);
+
     this.datesToCheck='';
   }
 

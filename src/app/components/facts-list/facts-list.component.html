@@ -1,3 +1,12 @@
-<p>
-  facts-list works!
-</p>
+<section>
+  <table>
+    <tr>
+      <th>Dates</th>
+      <th>Historical facts</th>
+    </tr>
+    <tr *ngFor="let fact of facts">
+      <td>{{ fact.date }}</td>
+      <td>{{ fact.fact }}</td>
+    </tr>
+  </table>
+</section>

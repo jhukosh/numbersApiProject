@@ -7,19 +7,13 @@
   <button (click)='getFacts()'>Get interesting data about the dates</button>
 </div>
 
-<div class='container d-flex flex-row justify-content-around'>
-  <div>
-    <h4>Dates</h4>
-    <div *ngFor="let date of dates">
-      <p>{{ date }}</p>
-    </div>
-  </div>
-
-  <div>
-    <h4>Historical facts</h4>
-    <div *ngFor="let fact of dateFact">
-      <p>{{ fact }}</p>
-    </div>
-  </div>
-
-</div>
+<table>
+  <tr>
+    <th>Dates</th>
+    <th>Historical facts</th>
+  </tr>
+  <tr *ngFor="let item of factsArr">
+    <td>{{ item.date }}</td>
+    <td>{{ item.fact }}</td>
+  </tr>
+</table>

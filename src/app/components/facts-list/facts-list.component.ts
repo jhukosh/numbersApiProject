@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PagesCommunicationService } from 'src/app/services/pages-communication.service';
+import { Facts } from 'src/app/models/fact.model';
 
 @Component({
   selector: 'app-facts-list',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./facts-list.component.scss']
 })
 export class FactsListComponent implements OnInit {
+  facts: Facts[];
 
-  constructor() { }
+  constructor(
+    private getDatasService: PagesCommunicationService
+    ) { }
 
   ngOnInit() {
+    this.facts = this.getDatasService.sendFacts();
   }
 
 }
