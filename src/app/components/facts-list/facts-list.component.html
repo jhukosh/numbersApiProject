@@ -1,12 +1,19 @@
 <section>
-  <table>
-    <tr>
-      <th>Dates</th>
-      <th>Historical facts</th>
-    </tr>
-    <tr *ngFor="let fact of facts">
-      <td>{{ fact.date }}</td>
-      <td>{{ fact.fact }}</td>
-    </tr>
+
+  <h3>Your facts collection</h3>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Dates</th>
+        <th scope="col">Historical facts</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let fact of facts">
+        <td>{{ fact.date }}</td>
+        <td>{{ fact.fact }}</td>
+      </tr>
+    </tbody>
   </table>
 </section>
