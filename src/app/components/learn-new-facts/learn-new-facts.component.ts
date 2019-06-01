@@ -9,10 +9,9 @@ import { Facts } from 'src/app/models/fact.model';
   styleUrls: ['./learn-new-facts.component.scss']
 })
 export class LearnNewFactsComponent {
-  dates = [];
   datesToCheck;
   factsArr : Facts[] = [];
-  factsObj : Facts;
+  factsObj : Facts; // Object creation to make sure each fact corresponds to its date and avoid async issues
   enableClick = false;
 
   constructor(
@@ -27,15 +26,15 @@ export class LearnNewFactsComponent {
     this.enableClick = true;
 
     /* changing property to array to get every date */
-    this.dates = this.datesToCheck.split(', ');
+    const dates = this.datesToCheck.split(', ');
 
     /* calling datas as object for each date */
 
-    for (let i = 0; i < this.dates.length; i++){
-      this.getApiDatasService.getDateFacts(this.dates[i])
+    for (const i of dates){
+      this.getApiDatasService.getDateFacts(i)
       .subscribe(dateFact => {
         this.factsObj = {
-          date: this.dates[i],
+          date: i,
           fact: dateFact
         };
 

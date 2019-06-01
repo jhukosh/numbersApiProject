@@ -8,7 +8,8 @@
     </div>
 
     <label for='dates' class='row justify-content-center'>
-      <p class='col-10 text-center'>Enter dates separated by commas (ex : 1/1, 4/13, 5/12) :<p>
+      <p class='col-12 text-center'>Enter dates separated by commas (ex : 1/1, 4/13, 5/12) :<p>
+        <br>
       <input id='dates' class='col-12 input' [ngModel]="datesToCheck" (ngModelChange)="datesToCheck=$event" placeholder="Enter your date here">
     </label>
 

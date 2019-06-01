@@ -6,11 +6,6 @@ import { SecondPageComponent } from './pages/second-page/second-page.component';
 const routes: Routes = [
   {
     path: '',
-    pathMatch: 'full',
-    redirectTo: 'learn-new-facts'
-  },
-  {
-    path: 'learn-new-facts',
     component: FirstPageComponent
   },
   {
