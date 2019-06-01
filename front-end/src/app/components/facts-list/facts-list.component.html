@@ -6,12 +6,22 @@
     <table class="table table-striped">
       <thead class="thead-dark">
         <tr class='row'>
-          <th class='col-3' scope="col">Dates</th>
-          <th class='col-9' scope="col">Historical facts</th>
+          <th class='col-3' 
+            scope="col"
+          >
+            Dates
+          </th>
+          <th class='col-9' 
+            scope="col"
+          >
+            Historical facts
+          </th>
         </tr>
       </thead>
       <tbody>
-        <tr class='row' *ngFor="let item of facts">
+        <tr class='row' 
+          *ngFor="let item of facts"
+        >
           <td class='col-3'>{{ item.date }}</td>
           <td class='col-9'>{{ item.fact }}</td>
         </tr>

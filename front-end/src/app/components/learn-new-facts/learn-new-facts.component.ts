@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NumbersApiDatasService } from 'src/app/services/numbers-api-datas.service';
 import { PagesCommunicationService } from 'src/app/services/pages-communication.service';
 import { Facts } from 'src/app/models/fact.model';
@@ -8,16 +8,21 @@ import { Facts } from 'src/app/models/fact.model';
   templateUrl: './learn-new-facts.component.html',
   styleUrls: ['./learn-new-facts.component.scss']
 })
-export class LearnNewFactsComponent {
+export class LearnNewFactsComponent implements OnInit {
   datesToCheck;
   factsArr : Facts[] = [];
-  factsObj : Facts; // Object creation to make sure each fact corresponds to its date and avoid async issues
+  factsObj : Facts;
+  displayFacts;
   enableClick = false;
 
   constructor(
     private getApiDatasService: NumbersApiDatasService, 
     private sendDatasService: PagesCommunicationService) 
     { }
+
+  ngOnInit(){
+    this.displayFacts = false;
+  }
 
   /* Method called on click */
 
@@ -33,6 +38,8 @@ export class LearnNewFactsComponent {
     for (const i of dates){
       this.getApiDatasService.getDateFacts(i)
       .subscribe(dateFact => {
+        /* Reconstrucing object to make sure each fact corresponds 
+        to its date and avoid async issues */
         this.factsObj = {
           date: i,
           fact: dateFact
@@ -43,6 +50,9 @@ export class LearnNewFactsComponent {
 
         /* pushing to display in component view */
         this.factsArr.push(this.factsObj);
+
+        /* to display facts table */
+        this.displayFacts = true;
       });
     }
 

@@ -7,8 +7,6 @@ import { Facts } from 'src/app/models/fact.model';
 export class PagesCommunicationService {
   facts: Facts[] = localStorage.getItem('facts') ? JSON.parse(localStorage.getItem('facts')) : [];
 
-  constructor() { }
-
   /* getting facts objects from page 1 */
   getFacts(facts){
     this.facts.push(facts);
