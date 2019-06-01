@@ -7,11 +7,13 @@
         Welcome to Julia's numbers API app !
       </h3>
       <p class='col-12 text-center'>
-        If your want to learn historical facts about a date or more, this app is made for you.
+        If your want to learn historical facts about one or more dates, this app is made for you.
       </p>
+      <span class='col-12 text-center' id='quote'>"History is not was, it is."</span> 
+      <span class='col-12 text-center'>William Faulkner</span>
     </div>
 
-    <label for='dates' 
+    <label for='dates'
       class='row justify-content-center'
     >
       <p class='col-12 text-center'>
@@ -28,13 +30,13 @@
 
     <div class='row justify-content-center getFacts'>
       <p class='col-12 text-center'>
-        Learn new facts :
+        Get interesting data about the dates :
       </p>
       <button [disabled]='enableClick' 
         class='btn btn-dark' 
         (click)='getFacts()'
       >
-        Get interesting data about the dates
+        Show historical facts
       </button>
     </div>
 

@@ -12,8 +12,13 @@
         font-family: $fontTitle;
     }
 
-    p, button, td {
+    p, button, td, span {
         font-family: $fontText;
+    }
+
+    #quote {
+        font-family: $fontQuotes;
+        font-size: 24px;
     }
 
     .getFacts {
