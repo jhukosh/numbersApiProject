@@ -5,8 +5,13 @@ import { SecondPageComponent } from './pages/second-page/second-page.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'home',
     component: FirstPageComponent
+  },
+  {
+    path:'',
+    redirectTo: '/home',
+    pathMatch: 'full'
   },
   {
     path: 'facts-list',

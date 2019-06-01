@@ -1,9 +1,12 @@
 @import'../../../styles.scss';
 
-.form {
-    margin-top: 10vh;
+:host {
+
     min-height: 90vh;
     width:100vw;
+
+    .form {
+    margin-top: 10vh;
 
     h3, th {
         font-family: $fontTitle;
@@ -38,4 +41,5 @@
         margin-top: 10vh;
         width: 80%;
     }
+}
 }

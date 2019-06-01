@@ -5,8 +5,14 @@
 
     h3 {
         font-family: $fontTitle;
-        margin: 10vh;
+        margin-top: 10vh;
         text-align: center;
+    }
+
+    button {
+        margin: 10vh;
+        position: center;
+        border: 1px solid grey;
     }
 
     th {
