@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+
 import { Facts } from 'src/app/models/fact.model';
 
 @Injectable({

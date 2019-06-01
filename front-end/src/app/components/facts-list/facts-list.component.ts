@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
+
 import { PagesCommunicationService } from 'src/app/services/pages-communication.service';
 import { Facts } from 'src/app/models/fact.model';
-import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-facts-list',

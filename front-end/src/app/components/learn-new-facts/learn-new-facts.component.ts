@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { NumbersApiDatasService } from 'src/app/services/numbers-api-datas.service';
 import { PagesCommunicationService } from 'src/app/services/pages-communication.service';
 import { Facts } from 'src/app/models/fact.model';
@@ -9,11 +10,11 @@ import { Facts } from 'src/app/models/fact.model';
   styleUrls: ['./learn-new-facts.component.scss']
 })
 export class LearnNewFactsComponent implements OnInit {
-  datesToCheck;
+  datesToCheck: string;
   factsArr : Facts[] = [];
   factsObj : Facts;
-  displayFacts;
-  enableClick = false;
+  displayFacts: boolean;
+  enableClick: boolean;
 
   constructor(
     private getApiDatasService: NumbersApiDatasService, 
@@ -22,6 +23,7 @@ export class LearnNewFactsComponent implements OnInit {
 
   ngOnInit(){
     this.displayFacts = false;
+    this.enableClick = false;
   }
 
   /* Method called on click */
