@@ -9,6 +9,7 @@ import { Facts } from 'src/app/models/fact.model';
   templateUrl: './learn-new-facts.component.html',
   styleUrls: ['./learn-new-facts.component.scss']
 })
+
 export class LearnNewFactsComponent implements OnInit {
   datesToCheck: string;
   factsArr : Facts[] = [];
