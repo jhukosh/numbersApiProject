@@ -21,7 +21,7 @@ export class FactsListComponent implements OnInit {
     this.facts = this.getDatasService.sendFacts();
   }
 
-  goBack(){
+  goBack(): void{
     this.location.back();
   }
 

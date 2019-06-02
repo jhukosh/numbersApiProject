@@ -28,15 +28,14 @@ export class LearnNewFactsComponent implements OnInit {
 
   /* Method called on click */
 
-  getFacts(){
+  getFacts(): void{
     /* disabling button during api call */
-    this.enableClick = true;
+    this.datesToCheck ? this.enableClick = true : this.enableClick = false;
 
     /* changing property to array to get every date */
     const dates = this.datesToCheck.split(', ');
 
     /* calling datas as object for each date */
-
     for (const i of dates){
       this.getApiDatasService.getDateFacts(i)
       .subscribe(dateFact => {

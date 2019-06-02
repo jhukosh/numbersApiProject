@@ -2,33 +2,34 @@
 
 
 .pict1 {
-    display: flex;
-    justify-content: space-around;
-    #pi {
-        height: 70px;
-        width: 50px;
-    }
+  display: flex;
+  justify-content: space-around;
+
+  #pi {
+    height: 70px;
+    width: 50px;
+  }
 }
 
 a {
-    font-family: $fontText;
-    font-size: 20px;
-    margin-left: 5vh;
-    border-bottom: auto;
+  border-bottom: auto;
+  font-family: $fontText;
+  font-size: 20px;
+  margin-left: 5vh;
 }
 
 .activeClass {
-    color: #ffffff !important;
-    border-bottom: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  color: #ffffff !important;
 }
 
 
 @media screen and (max-width: 991px){
-    a {
-        margin-left: 0;
-    }
+  a {
+    margin-left: 0;
+  }
 
-    .activeClass {
-        border-bottom: none;
-    }
+  .activeClass {
+    border-bottom: none;
+  }
 }

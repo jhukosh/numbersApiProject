@@ -2,57 +2,57 @@
 
 :host {
 
-    min-height: 90vh;
-    width:100vw;
+  min-height: 90vh;
+  width:100vw;
 
-    .form {
+  .form {
     margin-top: 10vh;
 
     h3, th {
-        font-family: $fontTitle;
+      font-family: $fontTitle;
     }
 
     p, button, td, span {
-        font-family: $fontText;
+      font-family: $fontText;
     }
 
     .info {
-        max-width:80vw;
+      max-width:80vw;
     }
 
     #quote {
-        font-family: $fontQuotes;
-        font-size: 24px;
+      font-family: $fontQuotes;
+      font-size: 24px;
     }
 
     .getFacts {
-        margin-top: 5vh;
-        width: 100%;
+      margin-top: 5vh;
+      width: 100%;
     }
 
     .pict1 {
-        display: flex;
-        justify-content: space-around;
-        #pi {
-            height: 70px;
-            width: 50px;
-        }
+      display: flex;
+      justify-content: space-around;
+      #pi {
+        height: 70px;
+        width: 50px;
+      }
     }
 
     label{
-        margin-top: 5vh;
-        width:100%;
-        margin-right:0;
-        margin-left: 0;
+      margin-left: 0;
+      margin-right:0;
+      margin-top: 5vh;
+      width:100%;
     }
 
     .input {
-        width: 100%;
+      width: 100%;
     }
 
     .table {
-        margin-top: 10vh;
-        width: 80%;
+      margin-top: 10vh;
+      width: 80%;
     }
-}
+  }
 }

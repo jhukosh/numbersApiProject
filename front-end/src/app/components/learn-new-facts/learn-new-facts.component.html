@@ -46,6 +46,7 @@
     *ngIf="displayFacts"
   >
     <table class="table table-striped">
+
       <thead class="thead-dark">
         <tr class='row'>
           <th class='col-3' 
@@ -60,6 +61,7 @@
           </th>
         </tr>
       </thead>
+
       <tbody>
         <tr class='row' 
           *ngFor="let item of factsArr"
@@ -68,6 +70,7 @@
           <td class='col-9'>{{ item.fact }}</td>
         </tr>
       </tbody>
+      
     </table>
   </div>
   

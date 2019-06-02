@@ -1,33 +1,33 @@
 @import'../../../styles.scss';
 
 :host{
-    width:100vw;
+  width:100vw;
 
-    h3 {
-        font-family: $fontTitle;
-        margin-top: 10vh;
-        text-align: center;
+  h3 {
+    font-family: $fontTitle;
+    margin-top: 10vh;
+    text-align: center;
+  }
+
+  button {
+    border: 1px solid grey;
+    margin: 10vh;
+    position: center;
+  }
+
+  .factsTable {
+    max-width: 100vw;
+
+    table {
+      width: 90%;
     }
+  }
 
-    button {
-        margin: 10vh;
-        position: center;
-        border: 1px solid grey;
-    }
+  th {
+    font-family: $fontTitle;
+  }
 
-    .factsTable {
-        max-width: 100vw;
-
-        table {
-            width: 90%;
-        }
-    }
-
-    th {
-        font-family: $fontTitle;
-    }
-
-    p, button, td{
-        font-family: $fontText;
-    }
+  p, button, td{
+    font-family: $fontText;
+  }
 }
