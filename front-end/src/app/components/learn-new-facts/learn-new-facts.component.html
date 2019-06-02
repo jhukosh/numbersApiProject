@@ -6,11 +6,11 @@
       <h3 class='col-10 text-center'>
         Welcome to Julia's historical dates app !
       </h3>
-      <p class='col-12 text-center'>
+      <p class='col-12 text-center px-0 info'>
         If your want to learn historical facts about one or more dates, this app is made for you.
       </p>
-      <span class='col-12 text-center' id='quote'>"History is not was, it is."</span> 
-      <span class='col-12 text-center'>William Faulkner</span>
+      <span class='col-12 text-center px-0 info' id='quote'>"History is not was, it is."</span> 
+      <span class='col-12 text-center px-0 info'>William Faulkner</span>
     </div>
 
     <label for='dates'
@@ -28,12 +28,12 @@
       >
     </label>
 
-    <div class='row justify-content-center getFacts'>
-      <p class='col-12 text-center'>
+    <div class='row align-items-center flex-column getFacts mx-0'>
+      <p class='col-8 text-center'>
         Get interesting data about the dates :
       </p>
       <button [disabled]='enableClick' 
-        class='btn btn-dark' 
+        class='col-6 col-md-4 btn btn-dark' 
         (click)='getFacts()'
       >
         Show historical facts

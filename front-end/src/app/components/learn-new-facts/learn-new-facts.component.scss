@@ -16,6 +16,10 @@
         font-family: $fontText;
     }
 
+    .info {
+        max-width:80vw;
+    }
+
     #quote {
         font-family: $fontQuotes;
         font-size: 24px;
@@ -23,6 +27,7 @@
 
     .getFacts {
         margin-top: 5vh;
+        width: 100%;
     }
 
     .pict1 {
@@ -36,6 +41,9 @@
 
     label{
         margin-top: 5vh;
+        width:100%;
+        margin-right:0;
+        margin-left: 0;
     }
 
     .input {

@@ -1,7 +1,7 @@
 @import'../../../styles.scss';
 
-.collection{
-    width:90vw;
+:host{
+    width:100vw;
 
     h3 {
         font-family: $fontTitle;
@@ -13,6 +13,14 @@
         margin: 10vh;
         position: center;
         border: 1px solid grey;
+    }
+
+    .factsTable {
+        max-width: 100vw;
+
+        table {
+            width: 90%;
+        }
     }
 
     th {

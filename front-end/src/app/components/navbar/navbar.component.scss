@@ -1,10 +1,6 @@
 @import'../../../styles.scss';
 
 
-.activeClass {
-    color: #ffffff !important;
-}
-
 .pict1 {
     display: flex;
     justify-content: space-around;
@@ -17,4 +13,22 @@
 a {
     font-family: $fontText;
     font-size: 20px;
+    margin-left: 5vh;
+    border-bottom: auto;
+}
+
+.activeClass {
+    color: #ffffff !important;
+    border-bottom: 2px solid #ffffff;
+}
+
+
+@media screen and (max-width: 991px){
+    a {
+        margin-left: 0;
+    }
+
+    .activeClass {
+        border-bottom: none;
+    }
 }
